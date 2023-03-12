@@ -26,12 +26,15 @@ function gotPoses(results)
     {
         console.log(results);
     }
+  leftWristX = results[0].pose.leftWrist.x;
+  rightWristX = results[0].pose.rightWrist.x; 
+  difference = floor(leftWristX - rightWristX);
 }
 function draw(){
     background('#969A97');
-    textSize();
-    fill();
-    text(Sofia, 100, 200);
+  textSize(difference);   
+   fill('#FFE787');
+  text('Sofia', 100, 200);
   }
 
 
